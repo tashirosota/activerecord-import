@@ -1,10 +1,7 @@
-require "ostruct"
-
+require "activerecord-import/import/result"
 module ActiveRecord::Import::ConnectionAdapters; end
 
 module ActiveRecord::Import #:nodoc:
-  Result = Struct.new(:failed_instances, :num_inserts, :ids, :results)
-
   module ImportSupport #:nodoc:
     def supports_import? #:nodoc:
       true
